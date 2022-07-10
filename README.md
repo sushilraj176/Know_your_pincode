@@ -6,6 +6,8 @@ In this project i have used following technologies:
 
 The 3rd party API URL is:https://api.postalpincode.in/pincode/
 
+#Project hosted on github page:https://sushilraj176.github.io/Know_your_pincode/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
