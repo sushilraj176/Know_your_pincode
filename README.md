@@ -1,3 +1,11 @@
+In this project i have used following technologies:
+1>html5
+2>bootstrap 4
+3>react 18 version
+4>axios
+
+The 3rd party API URL is:https://api.postalpincode.in/pincode/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
