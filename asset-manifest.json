@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/Know_your_pincode/static/css/main.31d6cfe0.css",
-    "main.js": "/Know_your_pincode/static/js/main.df742104.js",
+    "main.js": "/Know_your_pincode/static/js/main.ff387185.js",
     "index.html": "/Know_your_pincode/index.html",
-    "main.df742104.js.map": "/Know_your_pincode/static/js/main.df742104.js.map"
+    "main.ff387185.js.map": "/Know_your_pincode/static/js/main.ff387185.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.df742104.js"
+    "static/js/main.ff387185.js"
   ]
 }
