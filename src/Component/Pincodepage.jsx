@@ -6,6 +6,7 @@ const Pincodepage = () => {
   const [postOffices, setPostOffices] = useState([]);
 
   const [pincode, setPincode] = useState('');
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const url = `https://api.postalpincode.in/pincode/${pincode}`;
 
@@ -13,9 +14,8 @@ const Pincodepage = () => {
     await axios
       .get(`${url}`)
       .then((res) => {
-        // let result = res.data[0].PostOffice;
-
         setPostOffices(res.data[0].PostOffice);
+        setActiveIndex(1);
       })
       .catch((error) => console.error(`Error:${error}`));
   };
@@ -63,33 +63,35 @@ const Pincodepage = () => {
         </div>
       </section>
 
-      <table className='table table-hover'>
-        <thead>
-          <tr>
-            <th scope='col'>Name</th>
-            <th scope='col'>Block</th>
-            <th scope='col'>District</th>
-            <th scope='col'>Division</th>
-            <th scope='col'>State</th>
-            <th scope='col'>Country</th>
-          </tr>
-        </thead>
+      {activeIndex === 1 && (
+        <table className='table table-hover'>
+          <thead>
+            <tr>
+              <th scope='col'>Name</th>
+              <th scope='col'>Block</th>
+              <th scope='col'>District</th>
+              <th scope='col'>Division</th>
+              <th scope='col'>State</th>
+              <th scope='col'>Country</th>
+            </tr>
+          </thead>
 
-        {postOffices.map((postoffice) => {
-          return (
-            <tbody>
-              <tr>
-                <td>{postoffice.Name}</td>
-                <td>{postoffice.Block}</td>
-                <td>{postoffice.District}</td>
-                <td>{postoffice.Division}</td>
-                <td>{postoffice.State}</td>
-                <td>{postoffice.Country}</td>
-              </tr>
-            </tbody>
-          );
-        })}
-      </table>
+          {postOffices.map((postoffice) => {
+            return (
+              <tbody>
+                <tr>
+                  <td>{postoffice.Name}</td>
+                  <td>{postoffice.Block}</td>
+                  <td>{postoffice.District}</td>
+                  <td>{postoffice.Division}</td>
+                  <td>{postoffice.State}</td>
+                  <td>{postoffice.Country}</td>
+                </tr>
+              </tbody>
+            );
+          })}
+        </table>
+      )}
     </>
   );
 };
